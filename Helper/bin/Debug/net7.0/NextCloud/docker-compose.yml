@@ -1,0 +1,40 @@
+version: '3'
+name: nextcloud
+
+services:
+  nextcloudDb:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Test1234*
+      MYSQL_DATABASE: nextcloud
+      MYSQL_USER: user
+      MYSQL_PASSWORD: Test1234*
+      MYSQL_LOG_CONSOLE: "true"
+    networks:
+      - nextcloud_network
+    volumes:
+      - nextclouddn_data:/var/lib/mysql
+  nextcloud:
+    image: nextcloud:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: nextcloud
+      MYSQL_USER: user
+      MYSQL_PASSWORD: Test1234*
+      MYSQL_HOST: NextCloudDn
+    ports:
+      - '8080:80'
+    networks:
+      - nextcloud_network
+    volumes:
+      - nextcloud_data:/var/www/html
+volumes:
+  nextclouddn_data:
+  nextcloud_data:
+networks:
+  nextcloud_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: "172.21.0.0/24"
