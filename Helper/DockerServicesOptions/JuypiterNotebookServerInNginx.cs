@@ -2,7 +2,6 @@
 using Installer.ComputerSystem.ProcessObj;
 using Installer.Packages.Docker;
 using Installer.Program;
-using Installer.Program.UserInputs;
 
 namespace Installer.DockerServicesOptions
 {
@@ -14,7 +13,7 @@ namespace Installer.DockerServicesOptions
 
         public override string Type => "Server";
 
-        private string _output; 
+        private string _output;
 
         public override string Output => _output;
 

@@ -67,7 +67,7 @@ namespace Installer.Packages.Docker
 
             Console.WriteLine($"Docker compose generated and saved to {fullPath}");
 
-            return outputDirectory; 
+            return outputDirectory;
         }
 
         public string GenerateDockerComposeRedis(bool configurePersistence = false, string containerName = "RedisServer", string redisPassword = "test")
@@ -119,7 +119,7 @@ namespace Installer.Packages.Docker
 
             Console.WriteLine($"Docker compose generated and saved to {fullPath}");
 
-            return outputDirectory; 
+            return outputDirectory;
         }
 
         public string GenerateDockerComposeGitLab(string gitlabContainerName = "test", string gitLabPassword = "Test123456789*", string restart = "always", string gitlabNetworkName = "bridge_gitlab", string networkDriver = "bridge")
@@ -229,7 +229,7 @@ namespace Installer.Packages.Docker
 
             Console.WriteLine($"Docker compose generated and saved to {fullPath}");
 
-            return outputDirectory; 
+            return outputDirectory;
         }
 
         public string GenerateDockerComposeNextcloud(string dbUsername = "dbUsername", string containerName = "nextcloud", string dbContainerName = "NextcloudDB", string dbPassword = "db_password", string dbRootPassword = "root_password")
@@ -378,7 +378,7 @@ namespace Installer.Packages.Docker
 
             Console.WriteLine($"Docker compose for Jupyter Notebook generated and saved to {fullPath}");
 
-            return outputDirectory; 
+            return outputDirectory;
         }
 
         public string GenerateDockerComposeJupyerInNginx(string jupyterContainerName = "jupyter", int jupyterPort = 8888, string networkName = "JupyterNetwork", int nginxPort = 8080)
@@ -549,7 +549,7 @@ namespace Installer.Packages.Docker
             Console.WriteLine($"Docker compose with Nginx for Jupyter, volumes, and network generated and saved to {fullPath}");
             Console.WriteLine($"Nginx configuration file generated and saved to {nginxConfPath}");
 
-            return outputDirectory; 
+            return outputDirectory;
         }
     }
 }

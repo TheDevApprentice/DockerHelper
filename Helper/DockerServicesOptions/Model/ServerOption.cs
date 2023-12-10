@@ -8,7 +8,7 @@ namespace Installer.ComputerSystem.Model
         public abstract string Description { get; }
         public abstract string Type { get; }
 
-        public abstract string Output { get ; }
+        public abstract string Output { get; }
 
 
         public abstract bool Configure();

@@ -123,7 +123,7 @@ namespace Installer.DockerServicesOptions
 
         public override void ExecuteInstall(out bool installationEnded)
         {
-            string executionDirectory = _output; 
+            string executionDirectory = _output;
 
             ProcessRunner processRunner = new ProcessRunner("docker-compose", "up", true, executionDirectory);
             processRunner.Run();
